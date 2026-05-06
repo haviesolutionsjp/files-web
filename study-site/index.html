@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tài liệu ôn tập - Chuyển gia đoạn 1 năm 1 TTS</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Tài liệu ôn tập - Chuyển gia đoạn 1 năm 1 TTS</p>
+        <h1>Luyện tập câu hòi trắc nghiệm Đúng/Sai </h1>
+      </div>
+      <label class="exam-picker">
+        <span>Chọn đề</span>
+        <select id="examSelect"></select>
+      </label>
+      <div class="scorebox" aria-live="polite">
+        <span id="score">0/0</span>
+        <small>diem</small>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="panel progress-panel">
+          <div class="panel-title">Bộ câu hỏi</div>
+          <div id="questionNav" class="question-nav"></div>
+        </div>
+        <div class="panel vocab-bank">
+          <div class="panel-title">Từ vựng cần học</div>
+          <div id="vocabBank"></div>
+        </div>
+      </aside>
+
+      <section class="quiz-panel" aria-live="polite">
+        <div class="quiz-meta">
+          <span id="sectionTag"></span>
+          <span id="pageTag"></span>
+        </div>
+
+        <article class="question-card">
+          <div class="question-head">
+            <span id="questionNumber"></span>
+            <div class="audio-row">
+              <button id="playAudio" class="icon-button" type="button" title="Nghe audio">▶</button>
+              <audio id="audioPlayer" controls preload="none"></audio>
+            </div>
+          </div>
+
+          <p id="jpSentence" class="jp-sentence"></p>
+          <p id="romaji" class="romaji"></p>
+          <p id="translation" class="translation"></p>
+
+          <div class="answer-row">
+            <button id="answerTrue" class="answer-button" type="button">Đúng</button>
+            <button id="answerFalse" class="answer-button" type="button">Sai</button>
+          </div>
+
+          <div id="feedback" class="feedback" hidden></div>
+        </article>
+
+        <section class="details-grid">
+          <div class="panel">
+            <div class="panel-title">Giải thích</div>
+            <p id="explanation" class="explanation"></p>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Từ vựng trong câu</div>
+            <div id="vocabList" class="vocab-list"></div>
+          </div>
+        </section>
+
+        <div class="controls">
+          <button id="prevQuestion" type="button"><span>← Câu trước</span><kbd>←</kbd></button>
+          <button id="resetQuiz" type="button">Làm lại</button>
+          <button id="nextQuestion" type="button"><span>Câu tiếp →</span><kbd>→</kbd></button>
+        </div>
+      </section>
+
+      <aside class="source-panel">
+        <div class="panel-title">Ảnh từ PDF</div>
+        <img id="sourceImage" src="assets/pages/page_01.jpg" alt="Trang goc tu PDF">
+      </aside>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
